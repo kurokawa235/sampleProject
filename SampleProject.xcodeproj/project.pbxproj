@@ -12,6 +12,7 @@
 		EE70CE0324FB6DA600C1DF0B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = EE70CE0224FB6DA600C1DF0B /* RxCocoa */; };
 		EE70CE0524FB714F00C1DF0B /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */; };
 		EE70CE0724FB715C00C1DF0B /* StartUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */; };
+		EE70CE0A24FB7C5900C1DF0B /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */; };
 		EE73038524FB6A9D002AA3A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73038424FB6A9D002AA3A7 /* AppDelegate.swift */; };
 		EE73038924FB6A9D002AA3A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */; };
 		EE73038E24FB6AA4002AA3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE73038D24FB6AA4002AA3A7 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartUp.storyboard; sourceTree = "<group>"; };
+		EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		EE73038124FB6A9D002AA3A7 /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE73038424FB6A9D002AA3A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				EE73038424FB6A9D002AA3A7 /* AppDelegate.swift */,
 				EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */,
 				EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */,
+				EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */,
 				EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */,
 				EE73038D24FB6AA4002AA3A7 /* Assets.xcassets */,
 				EE73038F24FB6AA4002AA3A7 /* LaunchScreen.storyboard */,
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE73038924FB6A9D002AA3A7 /* HomeViewController.swift in Sources */,
+				EE70CE0A24FB7C5900C1DF0B /* ApiProvider.swift in Sources */,
 				EE70CE0524FB714F00C1DF0B /* StartUpViewController.swift in Sources */,
 				EE73038524FB6A9D002AA3A7 /* AppDelegate.swift in Sources */,
 			);
