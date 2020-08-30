@@ -25,7 +25,9 @@ class StartUpViewController: UIViewController {
         .disposed(by: disposeBag)
     }
     private func login() {
-        ApiProvider(GitHubAPI.SearchUsers(keyword: "test")).requestApi()
+        //ApiProvider(GitHubAPI.SearchUsers(keyword: "a")).requestApi()
+        let request = GitHubAPI.SearchRepositories(keyword: "a")
+        ApiProvider(request).requestApi()
     }
     /*
     // MARK: - Navigation

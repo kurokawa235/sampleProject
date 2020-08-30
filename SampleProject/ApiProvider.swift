@@ -8,41 +8,28 @@
 import Foundation
 import Alamofire
 
-class ApiProvider<T:GitHubRequest> {
+class ApiProvider<T:Request> {
     var request:T
-    var da:SearchResponse<User>?
-    
+    var response:T.Response?
     init(_ request:T) {
         self.request = request
     }
-    
     func requestApi() {
-        
         let baseUrl = self.request.baseURL
-        
         let searchUrl = "\(baseUrl)\(self.request.path)"
-        
         let parameters: [String: Any] = ["q": "\(self.request.keyword)"]
-        
         let headers: HTTPHeaders = ["Content-Type": "application/json"]
         AF.request(searchUrl, method: .get, parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { response in
             guard let data = response.data else {
-                
                 return
             }
-            
-            var j = JSONDecoder()
-            
+            let json = JSONDecoder()
             do {
-                
-                
-                self.da = try j.decode(SearchResponse<User>.self, from: data)
-                
+                self.response = try json.decode(T.Response.self, from: data)
             } catch let error {
-                
                 print("Error: \(error)")
             }
-            print("\(self.da)")
+            print("\(self.response)")
         }
     }
 }
