@@ -13,6 +13,10 @@
 		EE70CE0524FB714F00C1DF0B /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */; };
 		EE70CE0724FB715C00C1DF0B /* StartUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */; };
 		EE70CE0A24FB7C5900C1DF0B /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */; };
+		EE70CE0C24FB84A300C1DF0B /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0B24FB84A200C1DF0B /* GitHubAPI.swift */; };
+		EE70CE0E24FB84BB00C1DF0B /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0D24FB84BB00C1DF0B /* SearchResponse.swift */; };
+		EE70CE1124FB84FD00C1DF0B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE0F24FB84FC00C1DF0B /* Repository.swift */; };
+		EE70CE1224FB84FD00C1DF0B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE70CE1024FB84FC00C1DF0B /* User.swift */; };
 		EE73038524FB6A9D002AA3A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73038424FB6A9D002AA3A7 /* AppDelegate.swift */; };
 		EE73038924FB6A9D002AA3A7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */; };
 		EE73038E24FB6AA4002AA3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE73038D24FB6AA4002AA3A7 /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 		EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartUp.storyboard; sourceTree = "<group>"; };
 		EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		EE70CE0B24FB84A200C1DF0B /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		EE70CE0D24FB84BB00C1DF0B /* SearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		EE70CE0F24FB84FC00C1DF0B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EE70CE1024FB84FC00C1DF0B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EE73038124FB6A9D002AA3A7 /* SampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE73038424FB6A9D002AA3A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 				EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */,
 				EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */,
 				EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */,
+				EE70CE0B24FB84A200C1DF0B /* GitHubAPI.swift */,
+				EE70CE0D24FB84BB00C1DF0B /* SearchResponse.swift */,
+				EE70CE0F24FB84FC00C1DF0B /* Repository.swift */,
+				EE70CE1024FB84FC00C1DF0B /* User.swift */,
 				EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */,
 				EE73038D24FB6AA4002AA3A7 /* Assets.xcassets */,
 				EE73038F24FB6AA4002AA3A7 /* LaunchScreen.storyboard */,
@@ -298,9 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE70CE1124FB84FD00C1DF0B /* Repository.swift in Sources */,
 				EE73038924FB6A9D002AA3A7 /* HomeViewController.swift in Sources */,
 				EE70CE0A24FB7C5900C1DF0B /* ApiProvider.swift in Sources */,
+				EE70CE0E24FB84BB00C1DF0B /* SearchResponse.swift in Sources */,
+				EE70CE1224FB84FD00C1DF0B /* User.swift in Sources */,
 				EE70CE0524FB714F00C1DF0B /* StartUpViewController.swift in Sources */,
+				EE70CE0C24FB84A300C1DF0B /* GitHubAPI.swift in Sources */,
 				EE73038524FB6A9D002AA3A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
