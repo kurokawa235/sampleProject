@@ -144,6 +144,7 @@
 				EE73037D24FB6A9D002AA3A7 /* Sources */,
 				EE73037E24FB6A9D002AA3A7 /* Frameworks */,
 				EE73037F24FB6A9D002AA3A7 /* Resources */,
+				EE70CE0824FB782500C1DF0B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -268,6 +269,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE70CE0824FB782500C1DF0B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"warning: Mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE73037D24FB6A9D002AA3A7 /* Sources */ = {
