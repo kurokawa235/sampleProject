@@ -5,20 +5,44 @@
 //  Created by kurokawahirokazu on 2020/08/30.
 //  Copyright © 2020 kurokawahirokazu. All rights reserved.
 //
-
+import Foundation
 import Alamofire
 
-class ApiProvider {
-    static func requestApi() {
-        let baseUrl = "http://zipcloud.ibsnet.co.jp/api/"
-        let searchUrl = "\(baseUrl)search"
-        let parameters: [String: Any] = ["zipcode": "2790031"]
+class ApiProvider<T:GitHubRequest> {
+    var request:T
+    var da:SearchResponse<User>?
+    
+    init(_ request:T) {
+        self.request = request
+    }
+    
+    func requestApi() {
+        
+        let baseUrl = self.request.baseURL
+        
+        let searchUrl = "\(baseUrl)\(self.request.path)"
+        
+        let parameters: [String: Any] = ["q": "\(self.request.keyword)"]
+        
         let headers: HTTPHeaders = ["Content-Type": "application/json"]
         AF.request(searchUrl, method: .get, parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: headers).responseJSON { response in
             guard let data = response.data else {
+                
                 return
             }
-            print(response)
+            
+            var j = JSONDecoder()
+            
+            do {
+                
+                
+                self.da = try j.decode(SearchResponse<User>.self, from: data)
+                
+            } catch let error {
+                
+                print("Error: \(error)")
+            }
+            print("\(self.da)")
         }
     }
 }
