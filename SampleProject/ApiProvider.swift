@@ -29,7 +29,6 @@ class ApiProvider<T:Request> {
             } catch let error {
                 onError(error)
             }
-            
         }
     }
 }

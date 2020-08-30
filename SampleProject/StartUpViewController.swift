@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import Alamofire
 
-class StartUpViewController: UIViewController {
+final class StartUpViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     private let disposeBag = DisposeBag()
     override func viewDidLoad() {
@@ -26,15 +26,15 @@ class StartUpViewController: UIViewController {
     }
     private func login() {
         //ApiProvider(GitHubAPI.SearchUsers(keyword: "a")).requestApi()
-        let request = GitHubAPI.SearchRepositories(keyword: "abc")
+        let request = GitHubAPI.SearchRepositories(keyword: "aac")
         ApiProvider(request).requestApi(completion: { result in
             print(result.items[0])
-            
             let sb = UIStoryboard(name: "Home", bundle: nil)
-            guard let vc = sb.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else{
+            guard let vc = sb.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
                 return
             }
             vc.repo = result.items[0]
+            vc.repoData = result.items
             self.navigationController?.pushViewController(vc, animated: true)
         }, onError: { result in
             

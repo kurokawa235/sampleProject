@@ -119,6 +119,7 @@
 			children = (
 				EE73038424FB6A9D002AA3A7 /* AppDelegate.swift */,
 				EE70CE0424FB714F00C1DF0B /* StartUpViewController.swift */,
+				EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */,
 				EE73038824FB6A9D002AA3A7 /* HomeViewController.swift */,
 				EE70CE1324FBE2B300C1DF0B /* Home.storyboard */,
 				EE70CE0924FB7C5900C1DF0B /* ApiProvider.swift */,
@@ -126,7 +127,6 @@
 				EE70CE0D24FB84BB00C1DF0B /* SearchResponse.swift */,
 				EE70CE0F24FB84FC00C1DF0B /* Repository.swift */,
 				EE70CE1024FB84FC00C1DF0B /* User.swift */,
-				EE70CE0624FB715C00C1DF0B /* StartUp.storyboard */,
 				EE73038D24FB6AA4002AA3A7 /* Assets.xcassets */,
 				EE73038F24FB6AA4002AA3A7 /* LaunchScreen.storyboard */,
 				EE73039224FB6AA4002AA3A7 /* Info.plist */,
