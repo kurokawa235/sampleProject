@@ -10,11 +10,10 @@ import Alamofire
 
 class ApiProvider<T:Request> {
     var request:T
-    var response:T.Response?
     init(_ request:T) {
         self.request = request
     }
-    func requestApi() {
+    func requestApi(completion: @escaping (T.Response) -> Void,onError: @escaping (Error) -> Void) {
         let baseUrl = self.request.baseURL
         let searchUrl = "\(baseUrl)\(self.request.path)"
         let parameters: [String: Any] = ["q": "\(self.request.keyword)"]
@@ -25,11 +24,12 @@ class ApiProvider<T:Request> {
             }
             let json = JSONDecoder()
             do {
-                self.response = try json.decode(T.Response.self, from: data)
+                var response:T.Response = try json.decode(T.Response.self, from: data)
+                completion(response)
             } catch let error {
-                print("Error: \(error)")
+                onError(error)
             }
-            print("\(self.response)")
+            
         }
     }
 }

@@ -26,8 +26,19 @@ class StartUpViewController: UIViewController {
     }
     private func login() {
         //ApiProvider(GitHubAPI.SearchUsers(keyword: "a")).requestApi()
-        let request = GitHubAPI.SearchRepositories(keyword: "a")
-        ApiProvider(request).requestApi()
+        let request = GitHubAPI.SearchRepositories(keyword: "abc")
+        ApiProvider(request).requestApi(completion: { result in
+            print(result.items[0])
+            
+            let sb = UIStoryboard(name: "Home", bundle: nil)
+            guard let vc = sb.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else{
+                return
+            }
+            vc.repo = result.items[0]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }, onError: { result in
+            
+        })
     }
     /*
     // MARK: - Navigation

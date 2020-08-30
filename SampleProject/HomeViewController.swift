@@ -10,9 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var repo:Repository?
+    
+    @IBOutlet weak var userLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        userLabel.text = repo?.name
     }
 
 }
